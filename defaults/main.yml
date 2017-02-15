@@ -1,0 +1,20 @@
+---
+# defaults file for ansible-directories role
+
+# ---- List of global directories ----
+# should be created as group_vars/directories_list_all.yml
+directories_list_all: []
+
+  #- path: '/tmp/directory' # required
+  #  state: 'directory'
+  #  owner: 'root'
+  #  group: 'root'
+  #  mode: '0755'
+
+# ---- List of directories in a host group ----
+# should be created as group_vars/ntp_servers/directories_list_group.yml
+directories_list_group: []
+
+# ---- List of directories for a specific host ----
+# should be created as host_vars/dc-41-vd-mn-001/directories_list_host.yml
+directories_list_host: []

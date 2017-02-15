@@ -1,0 +1,15 @@
+---
+# tasks file for ansible-directories role
+
+- name: Create directories
+  file:
+    path:  '{{ item.path }}'
+    state: '{{ item.state | default("directory") }}'
+    owner: '{{ item.owner | default("root") }}'
+    group: '{{ item.group | default("root") }}'
+    mode:  '{{ item.mode  | default("0700") }}'
+  with_flattened:
+    - '{{ directories_list_all }}'
+    - '{{ directories_list_group }}'
+    - '{{ directories_list_host }}'
+  when: (item.path is defined and item.path)
