@@ -1,0 +1,15 @@
+galaxy_info:
+  author:
+    - U.S. National Library of Medicine (NLM-OCCS)
+  description: An ansible role to create directories we always need
+  company: U.S. National Library of Medicine (NLM)
+  min_ansible_version: 1.9
+  platforms:
+    - name: EL
+      versions:
+        - 7
+  galaxy_tags:
+    - cloud
+    - cloud:ec2
+  dependencies: []
+
